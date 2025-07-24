@@ -12,18 +12,23 @@
 	<link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 	<link rel="icon" href="../ProyectoPortafolio-FAD-/favicon/favicon.png" type="image/png">
 	<script src="https://kit.fontawesome.com/008d8e7f51.js" crossorigin="anonymous"></script>
+
 	<title>Andrea Arciniega</title>
 </head>
 <body>
 <header>
+	<!--top navigation menu-->
+
 	<!--navbar-->
-	<nav class="nav-aead">
+	<nav class="nav-aead" id="myTopnav">
 		<div class="container-nav">
 			<div class="logo-nav">
 				<a class="navbar-brand" href="Inicio.html">
-				<img src="../ProyectoPortafolio-FAD-/images/logo-andy.svg" alt="logo"  width="84px" height="84px"></a>
+					<img src="../ProyectoPortafolio-FAD-/images/logo-andy.svg" alt="logo"  width="84px" height="84px">
+				</a>
 			</div>
-			<div class="navbar-menu">
+
+			<div class="navbar-menu" id="navMenu">
 				<div class="navbar-nav">
   				    
                     <a class="nav-link" href="sobremi.html">Sobre mí</a>
@@ -32,7 +37,10 @@
                     <a class="nav-link" href="contacto.html">Contacto</a>
 				</div>
   			</div>
-  		</div>
+  			<a href="#" class="icon"  onclick="toggleMenu()">
+  				<i class="fa fa-bars"></i>
+			</a>  		
+		</div>
 	</nav>
 </header>
 
@@ -185,7 +193,7 @@
 				<h1>Trabajemos juntos</h1>
             </div>
 			<div class="boton-contacto">
-				<a href="#">Contáctame</a>
+				<a href="contacto.html">Contáctame</a>
 			</div>
 		</div>
 
@@ -206,7 +214,14 @@
 
 	</footer>
 
+<script>
+  function toggleMenu() {
+    const menu = document.getElementById("navMenu");
+    menu.classList.toggle("show");
+  }
+</script>
 <script src="carrusel.js"></script>
+
 
 </body>
 </html>
